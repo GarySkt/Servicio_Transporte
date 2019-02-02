@@ -4,6 +4,8 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -32,6 +34,9 @@ public class Inicio extends AppCompatActivity {
         setContentView(R.layout.activity_inicio);
 //        getActionBar().hide(); //oculta el action bar
         getSupportActionBar().hide();
+
+        Window w = getWindow();//oculta status bar del activity
+        w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
         btn_ingresar = findViewById(R.id.btn_ingresar);
         btn_registrar = findViewById(R.id.btn_registrar);
